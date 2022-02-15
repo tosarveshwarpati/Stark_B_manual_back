@@ -144,7 +144,7 @@ for lam in l[peak]:
             y0 = coords_int[0]
             y1 = coords_int[1]
             x_values = obs[mask][:,0]
-            def backgroung(x_values, x0,x1,y0,y1):
+            def background(x_values, x0,x1,y0,y1):
                 BG = (((y1-y0)/(x1-x0))*(x_values - x0)) + y0
                 return BG
             correct_out = obs[mask][:,0],obs[mask][:,1] - background(x_values, x0,x1,y0,y1)
